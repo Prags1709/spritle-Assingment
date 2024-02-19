@@ -1,0 +1,389 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    /* overflow: hidden; */
+}
+
+#spritel-main {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* navbar */
+#spritel-navbar {
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+#spritel-navbar > .spritle-logo {
+    z-index: 2;
+}
+
+#spritel-navbar > .spritle-logo > img {
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+}
+
+.spritle-title {
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.spritle-title > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    z-index: 2; 
+}
+
+.start-btn > button {
+    border: none;
+    color: white;
+    font-size: 16px;
+    background-color: #012d62;
+    padding: 10px 27px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* logo-animation */
+.mid-logos > .center-logo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mid-logos > .center-logo > img {
+    width: 100%;
+}
+
+.mid-logos > .sp-animation-logo {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+}
+
+.mid-logos > .sp-animation-logo > img {
+    width: 100%;
+}
+
+.mid-logos > .animation-logo1 {
+    transition: 2s;
+    transform: translateX(200px);
+}
+
+.mid-logos > .animation-logo2 {
+    transition: 2s;
+    transform: translateX(-235px);
+}
+
+.mid-logos > .animation-logo3 {
+    transition: 2s;
+    transform: translate(100px, -140px);
+}
+
+.mid-logos > .animation-logo4 {
+    transition: 2s;
+    transform: translate(-135px, -140px);
+}
+
+/* content */
+.sp-text {
+    text-align: center;
+}
+
+.sp-text > h1 {
+    font-size: 54px;
+    font-weight: 600;
+    margin-top: 300px;
+}
+
+.sp-text > p {
+    font-size: large;
+}
+
+#spritel-content > .start-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* background-circle */
+.background-circle > .sp-circle {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: inset 0 5px 4px 2px rgb(0 0 0 / 0.05);
+}
+
+.background-circle > .sp-circle-1 {
+    width: 420px;
+    height: 420px;
+}
+
+.background-circle > .sp-circle-2 {
+    width: 600px;
+    height: 600px;
+    box-shadow: none;
+}
+
+.background-circle > .sp-circle-3 {
+    width: 780px;
+    height: 780px;
+    box-shadow: none;
+}
+
+.blur-box {
+    position: absolute;
+    top: 50px !important;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.center-box {
+    justify-content: center;
+}
+
+.bg-shape1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    animation: ballOne 10s infinite;
+    background-color: rgb(110, 235, 110);
+}
+
+.bg-shape2 {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: relative;
+    animation: ballTwo 10s infinite;
+    background-color: rgb(91, 106, 236);
+}
+
+@keyframes ballOne {
+    0%{left: 0px; top: 0px;}
+    25%{left: 700px; top: 70px;}
+    50%{left: 380px; top: 180px;}
+    75%{left: 530px; top: 50px;}
+    100%{left: 70px; top: 0px;}
+}
+
+@keyframes ballTwo {
+    0%{left: 50px; top: 0px;}
+    25%{left: 300px; top: 70px;}
+    50%{left: 690px; top: 150px;}
+    75%{left: 500px; top: 50px;}
+    100%{left: 380px; top: 90px;}
+}
+
+.bg-blur {
+    filter: blur(90px);
+    opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #spritel-navbar {
+        padding: 0 50px;
+    }
+
+    .start-btn > button {
+        font-size: 14px;
+    }
+
+    .sp-text > h1 {
+        font-size: 48px;
+    }
+
+    .sp-text > p {
+        font-size: medium;
+    }
+
+    .background-circle > .sp-circle-1 {
+        width: 320px;
+        height: 320px;
+    }
+
+    .background-circle > .sp-circle-2 {
+        width: 500px;
+        height: 500px;
+    }
+
+    .background-circle > .sp-circle-3 {
+        width: 680px;
+        height: 680px;
+    }
+
+    @keyframes ballOne {
+        0%{left: 0px; top: 0px;}
+        25%{left: 500px; top: 70px;}
+        50%{left: 180px; top: 180px;}
+        75%{left: 330px; top: 50px;}
+        100%{left: 70px; top: 0px;}
+    }
+
+    @keyframes ballTwo {
+        0%{left: 50px; top: 0px;}
+        25%{left: 100px; top: 70px;}
+        50%{left: 370px; top: 150px;}
+        75%{left: 300px; top: 50px;}
+        100%{left: 180px; top: 90px;}
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    html,body {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+    }
+
+    #spritel-navbar {
+        padding: 0 10px 0 30px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .spritle-title {
+        flex-direction: column;
+        justify-content: left;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200px;
+        height: 100%;
+        background-color: aqua;
+        padding: 95px 0 0 20px;
+        transition: .5s;
+    }
+
+    .spritle-title.active {
+        left: 0;
+    }
+
+    .spritle-title > a {
+        margin: 5px 0;           
+    }
+
+    #spritel-navbar > .start-btn {
+        display: none;
+    }
+
+    .mid-logos > .center-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .mid-logos > .sp-animation-logo {
+        height: 30px;
+        width: 30px;
+    }
+
+    .mid-logos > .animation-logo1 {
+        transition: 2s;
+        transform: translateX(150px);
+    }
+
+    .mid-logos > .animation-logo2 {
+        transition: 2s;
+        transform: translateX(-185px);
+    }
+
+    .mid-logos > .animation-logo3 {
+        transition: 2s;
+        transform: translate(50px, -120px);
+    }
+
+    .mid-logos > .animation-logo4 {
+        transition: 2s;
+        transform: translate(-85px, -120px);
+    }
+
+    .sp-text > h1 {
+        font-size: 38px;
+    }
+
+    .sp-text > p {
+        font-size: 14px;
+    }
+
+    .background-circle > .sp-circle-1 {
+        width: 120px;
+        height: 120px;
+    }
+
+    .background-circle > .sp-circle-2 {
+        width: 240px;
+        height: 240px;
+    }
+
+    .background-circle > .sp-circle-3 {
+        width: 370px;
+        height: 370px;
+    }
+
+    @keyframes ballOne {
+        0%{left: 0px; top: 0px;}
+        25%{left: 20px; top: 70px;}
+        50%{left: 40px; top: 180px;}
+        75%{left: 60px; top: 50px;}
+        100%{left: 20px; top: 0px;}
+    }
+
+    @keyframes ballTwo {
+        0%{left: 50px; top: 0px;}
+        25%{left: 60px; top: 70px;}
+        50%{left: 20px; top: 150px;}
+        75%{left: 50px; top: 50px;}
+        100%{left: 60px; top: 90px;}
+    }
+}
